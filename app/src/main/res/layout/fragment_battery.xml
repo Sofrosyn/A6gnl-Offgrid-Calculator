@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.BatteryFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content" android:orientation="vertical" android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content" android:layout_marginTop="16dp" android:id="@+id/line1">
+
+
+            <com.akexorcist.roundcornerprogressbar.IconRoundCornerProgressBar
+                android:layout_width="260dp" android:layout_height="wrap_content"  app:rcBackgroundColor="#0A000000"
+                app:rcBackgroundPadding="2dp" app:rcIconBackgroundColor="@color/colorPrimaryDark" app:rcIconPadding="5dp" android:layout_marginTop="8dp"
+                app:rcIconSize="40dp" app:rcIconSrc="@drawable/ic_baseline_battery_charging_full_24" app:rcMax="150"
+                app:rcProgress="0" app:rcProgressColor="@android:color/holo_green_dark" app:rcRadius="5dp"
+                app:rcReverse="true" app:rcAnimationEnable="true" android:id="@+id/battery_progress_charge"/>
+
+            <TextView
+                android:layout_width="wrap_content" android:layout_gravity="center" android:textStyle="bold" android:textSize="20sp"
+                android:layout_height="wrap_content" android:id="@+id/text_chargeController" android:layout_marginTop="8dp" android:text="0"/>
+
+<!--
+
+            <com.akexorcist.roundcornerprogressbar.IconRoundCornerProgressBar
+                android:layout_width="260dp" android:layout_height="wrap_content"  app:rcBackgroundColor="#0A000000"
+                app:rcBackgroundPadding="2dp" app:rcIconBackgroundColor="@color/colorPrimaryDark" app:rcIconPadding="5dp" android:layout_marginTop="8dp"
+                app:rcIconSize="40dp" app:rcIconSrc="@drawable/ic_baseline_timer_24" app:rcMax="150" android:id="@+id/battery_progress_time2charge"
+                app:rcProgress="0" app:rcProgressColor="@android:color/holo_green_dark" app:rcRadius="5dp" app:rcReverse="true" app:rcAnimationEnable="true" />
+
+
+
+
+            <TextView
+                android:layout_width="wrap_content" android:layout_gravity="center" android:textStyle="bold" android:textSize="20sp"
+                android:layout_height="wrap_content" android:id="@+id/text_timetocharge" android:layout_marginTop="8dp" android:text="0"/>
+
+-->
+
+
+
+        </LinearLayout>
+
+
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"  android:layout_below="@id/line1"
+            android:layout_height="56dp" android:text="Next" android:id="@+id/battery_next"
+            android:layout_marginTop="16dp" android:layout_alignParentRight="true" android:layout_marginRight="8dp"/>
+
+
+
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_marginHorizontal="8dp" android:id="@+id/card1"
+            android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <LinearLayout
+                android:layout_width="match_parent" android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content" android:text="* Charge Controller" android:textSize="18dp"
+                    android:layout_height="wrap_content" android:textStyle="bold"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent" android:hint="Enter Power Rating of Solar" app:hintEnabled="true" app:hintAnimationEnabled="true"
+                    android:layout_height="wrap_content"   style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" android:layout_marginTop="8dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent" android:inputType="number"
+                        android:layout_height="56dp" android:id="@+id/fragment_panel_rating"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent" android:hint="Number Of Solar Panel" app:hintEnabled="true"
+                    app:hintAnimationEnabled="true"
+                    android:layout_height="wrap_content"   style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" android:layout_marginTop="8dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent" android:inputType="number"
+                        android:layout_height="56dp" android:id="@+id/fragment_panel_no_panel"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content" android:text="Inverter Voltage" android:layout_marginLeft="8dp"
+                    android:layout_height="wrap_content" android:layout_marginTop="8dp"/>
+
+                <com.google.android.material.chip.ChipGroup
+                    android:layout_width="match_parent" app:chipSpacingHorizontal="8dp" app:singleSelection="true"
+                    android:layout_height="wrap_content" app:selectionRequired="true" android:id="@+id/battery_inverter_voltage">
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content" android:text="12" android:textAlignment="center"
+                        android:layout_height="wrap_content" style="@style/Widget.MyApp.Chip.Choice"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content" android:text="24" android:textAlignment="center"
+                        android:layout_height="wrap_content" style="@style/Widget.MyApp.Chip.Choice"/>
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content" android:text="48" android:textAlignment="center"
+                        android:layout_height="wrap_content" style="@style/Widget.MyApp.Chip.Choice"/>
+              </com.google.android.material.chip.ChipGroup>
+
+
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent" android:layout_margin="8dp" android:text="Calculate"
+                    android:layout_height="wrap_content" android:id="@+id/fragment_panel_calculate"/>
+
+
+
+
+                <TextView
+                    android:layout_width="wrap_content" android:layout_marginLeft="8dp" android:id="@+id/fragment_panel_summary"
+                    android:layout_height="wrap_content" />
+
+
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+
+<!--
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent" android:layout_margin="8dp" android:padding="8dp"
+            android:layout_height="wrap_content" android:layout_below="@+id/card1">
+            <LinearLayout
+                android:layout_width="match_parent" android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content" android:text="* Time To Charge" android:textSize="18dp"
+                    android:layout_height="wrap_content" android:textStyle="bold"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent" android:hint="Amp Hours Of Battery" android:layout_marginTop="8dp"
+                    android:layout_height="wrap_content"   style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent" android:inputType="number" android:id="@+id/fragment_battery_load"
+                        android:layout_height="56dp"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="match_parent" android:layout_margin="8dp" android:text="Calculate" android:id="@+id/cal_time2charge"
+                    android:layout_height="wrap_content" />
+
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content" android:text="No Of Batteries [12V Inverter]:"
+                    android:id="@+id/battery_invert_selected_voltage" android:textColor="@android:color/holo_green_dark"
+                    android:layout_height="wrap_content"  android:layout_marginLeft="8dp"/>
+
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+-->
+
+
+
+
+    </RelativeLayout>
+</FrameLayout>
