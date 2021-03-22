@@ -23,6 +23,7 @@ import com.sofrosyn.a6gnlsolarcalculator.R;
 import com.sofrosyn.a6gnlsolarcalculator.Utils.StateManager;
 import com.sofrosyn.a6gnlsolarcalculator.logic.Calculator;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import me.itangqi.waveloadingview.WaveLoadingView;
@@ -44,6 +45,7 @@ public class InverterRatingFragment extends Fragment {
     private static int batteryAmp = 100;
     private static int invertVoltage = 12;
     private static int divisor = 1;
+    private ArrayList<Integer> acceptedBatteryCount;
 
 
     private static double ratingKva;

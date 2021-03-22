@@ -130,6 +130,10 @@ public class StateManager {
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         return sharedPreferences.getFloat(KEY_CHARGE_CONTROLLER, 0);
     }
+    public int getPanelCount() {
+        SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
+        return sharedPreferences.getInt(KEY_NO_SOLAR_PANEL, 0);
+    }
 
     public int getPowerRating() {
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);

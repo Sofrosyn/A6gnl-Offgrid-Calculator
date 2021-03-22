@@ -58,11 +58,20 @@ public  class Calculator {
 
       }
 
+    public static double KvaMargin(double load ){
 
-      public static String formatDecimal(double value){
+
+        return load + 0.3*load;
+    }
+
+
+
+    public static String formatDecimal(double value){
           DecimalFormat decimalFormat = new DecimalFormat("#.##");
             return decimalFormat.format(value);
 
       }
+
+
 
 }

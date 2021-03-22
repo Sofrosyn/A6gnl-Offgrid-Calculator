@@ -25,7 +25,7 @@ import com.sofrosyn.a6gnlsolarcalculator.R;
 import com.sofrosyn.a6gnlsolarcalculator.Utils.StateManager;
 import com.sofrosyn.a6gnlsolarcalculator.logic.Calculator;
 
-public class BatteryFragment extends Fragment {
+public class PanelFragment extends Fragment {
 
 private ChipGroup voltageGroup;
 private TextInputEditText panelRating;
@@ -46,7 +46,7 @@ private static int valChargeController;
 private static int valSelectedVoltage = 12;
 
 
-    public BatteryFragment() {
+    public PanelFragment() {
         // Required empty public constructor
     }
 

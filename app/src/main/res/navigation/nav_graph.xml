@@ -13,7 +13,7 @@
 
     <fragment
         android:id="@+id/batteryFragment"
-        android:name="com.sofrosyn.a6gnlsolarcalculator.fragments.BatteryFragment"
+        android:name="com.sofrosyn.a6gnlsolarcalculator.fragments.PanelFragment"
         android:label="fragment_battery"
         tools:layout="@layout/fragment_battery" >
         <action
@@ -39,7 +39,7 @@
         android:id="@+id/panelFragment"
         android:name="com.sofrosyn.a6gnlsolarcalculator.fragments.PrintFragment"
         android:label="fragment_panel"
-        tools:layout="@layout/fragment_panel" />
+        tools:layout="@layout/fragment_print" />
     <fragment
         android:id="@+id/aboutUsFragment"
         android:name="com.sofrosyn.a6gnlsolarcalculator.fragments.AboutUsFragment"

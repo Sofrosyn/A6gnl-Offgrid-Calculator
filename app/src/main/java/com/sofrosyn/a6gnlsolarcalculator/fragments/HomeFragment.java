@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.bumptech.glide.Glide;
 import com.google.android.material.card.MaterialCardView;
 import com.sofrosyn.a6gnlsolarcalculator.R;
 import com.synnapps.carouselview.CarouselView;
@@ -53,7 +54,7 @@ public class HomeFragment extends Fragment  {
 
 
     private void initViews(){
-        int[] banners = {R.drawable.banner1,  R.drawable.banner2};
+        int[] banners = {R.drawable.go_gree_go_solar,R.drawable.solar_vs_nepa1,R.drawable.solar_maintain};
 
         prInverter = view.findViewById(R.id.Fragment_home_inverter);
        prBattery = view.findViewById(R.id.Fragment_home_battery);
@@ -62,11 +63,9 @@ public class HomeFragment extends Fragment  {
 
         carouselView = view.findViewById(R.id.Fragment_home_carasoul);
         carouselView.setPageCount(banners.length);
-        carouselView.setImageListener(new ImageListener() {
-            @Override
-            public void setImageForPosition(int position, ImageView imageView) {
-                imageView.setImageResource(banners[position]);
-            }
+        carouselView.setImageListener((position, imageView) -> {
+            //imageView.setImageResource(banners[position]);
+            Glide.with(getActivity()).asBitmap().load(banners[position]).into(imageView);
         });
 
 
