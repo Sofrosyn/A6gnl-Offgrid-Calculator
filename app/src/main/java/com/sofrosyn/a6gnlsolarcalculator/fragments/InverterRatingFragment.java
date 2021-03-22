@@ -1,7 +1,9 @@
 package com.sofrosyn.a6gnlsolarcalculator.fragments;
 
+import android.os.Build;
 import android.os.Bundle;
 
+import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
@@ -25,6 +27,7 @@ import com.sofrosyn.a6gnlsolarcalculator.logic.Calculator;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.IntStream;
 
 import me.itangqi.waveloadingview.WaveLoadingView;
 
@@ -68,6 +71,7 @@ public class InverterRatingFragment extends Fragment {
 
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -93,10 +97,12 @@ public class InverterRatingFragment extends Fragment {
         calculate = view.findViewById(R.id.inverter_calculate);
         waveLoadingView =view.findViewById(R.id.waveLoadingView);
         batteryChips = view.findViewById(R.id.chips_battery);
+        acceptedBatteryCount = new ArrayList<>();
 
     }
 
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     private void initActions(){
 
 
@@ -161,14 +167,22 @@ public class InverterRatingFragment extends Fragment {
                 switch (invertVoltage){
                     case 12:
                         divisor = 1;
+                        acceptedBatteryCount.clear();
+
+                        acceptedBatteryCount.add(IntStream.rangeClosed(1,10).iterator().nextInt());
+
                         Log.d("Divisor", " "+ divisor);
                         break;
                     case 24:
                         divisor = 2;
+                        acceptedBatteryCount.clear();
+                        IntStream.range(2, 20).filter(x -> x % 2 == 0).forEach((x) -> acceptedBatteryCount.add(x));
                         Log.d("Divisor", " "+ divisor);
                         break;
                     case 48 :
                         divisor = 4;
+                        acceptedBatteryCount.clear();
+                        IntStream.range(4, 20).filter(x -> x % 4 == 0).forEach((x) -> acceptedBatteryCount.add(x));
                         Log.d("Divisor", " "+ divisor);
                         break;
                 }
@@ -180,8 +194,7 @@ public class InverterRatingFragment extends Fragment {
 
 
    calculate.setOnClickListener(v -> {
-    if (TextUtils.isEmpty(inverterLoad.getText()) || TextUtils.isEmpty(batteryNumber.getText())){
-        Toast.makeText(getActivity(), "Fill in Values", Toast.LENGTH_SHORT).show();
+    if (!validate()){
         return;
     }else {
 
@@ -201,7 +214,20 @@ public class InverterRatingFragment extends Fragment {
 
 
 
+            private Boolean validate(){
 
+                if (TextUtils.isEmpty(inverterLoad.getText()) || TextUtils.isEmpty(batteryNumber.getText())){
+                    Toast.makeText(getActivity(), "Fill in Values", Toast.LENGTH_SHORT).show();
+                    return  false;
+                }
+
+                if(!acceptedBatteryCount.contains(Integer.parseInt(batteryNumber.getText().toString()))){
+                    Toast.makeText(getActivity(), "Accepted Battery Count "+acceptedBatteryCount, Toast.LENGTH_LONG).show();
+                    return false;
+                }
+
+        return true;
+            }
 
 
 

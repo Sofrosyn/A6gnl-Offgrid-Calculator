@@ -65,6 +65,7 @@ public class HomeFragment extends Fragment  {
         carouselView.setPageCount(banners.length);
         carouselView.setImageListener((position, imageView) -> {
             //imageView.setImageResource(banners[position]);
+            imageView.setScaleType(ImageView.ScaleType.FIT_XY);
             Glide.with(getActivity()).asBitmap().load(banners[position]).into(imageView);
         });
 
