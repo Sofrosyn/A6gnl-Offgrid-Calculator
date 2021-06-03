@@ -9,7 +9,20 @@
         android:id="@+id/homeFragment"
         android:name="com.sofrosyn.a6gnlsolarcalculator.fragments.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_notificationFragment"
+            app:destination="@id/notificationFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_troubleshootFragment"
+            app:destination="@id/troubleshootFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_aboutUsFragment"
+            app:destination="@id/aboutUsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_inverterRatingFragment"
+            app:destination="@id/inverterRatingFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/batteryFragment"
@@ -45,5 +58,15 @@
         android:name="com.sofrosyn.a6gnlsolarcalculator.fragments.AboutUsFragment"
         android:label="fragment_about_us"
         tools:layout="@layout/fragment_about_us" />
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.sofrosyn.a6gnlsolarcalculator.fragments.NotificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/troubleshootFragment"
+        android:name="com.sofrosyn.a6gnlsolarcalculator.fragments.TroubleshootFragment"
+        android:label="fragment_troubleshoot"
+        tools:layout="@layout/fragment_troubleshoot" />
 
 </navigation>

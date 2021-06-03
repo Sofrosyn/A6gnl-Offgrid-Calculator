@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "556328753488",
+    "project_id": "assacove-solar-calculator",
+    "storage_bucket": "assacove-solar-calculator.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:556328753488:android:f2a8853f76f03fc8663455",
+        "android_client_info": {
+          "package_name": "com.sofrosyn.a6gnlsolarcalculator"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "556328753488-n8bsrcm72na93bb3be5h1gcba2k4ljp2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sofrosyn.a6gnlsolarcalculator",
+            "certificate_hash": "f56c0ed0323b9dbd6ae64b6fc9af3849c4621151"
+          }
+        },
+        {
+          "client_id": "556328753488-cle6ok875rpnbhtkfbg2pbt7p1ark74k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBY5SDo13oX73O764bAVkHourBk6w8wU6g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "556328753488-cle6ok875rpnbhtkfbg2pbt7p1ark74k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

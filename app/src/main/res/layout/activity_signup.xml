@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.SignupActivity">
+
+
+ <com.google.android.material.button.MaterialButton
+     android:layout_width="wrap_content" android:text="@string/login" app:layout_constraintRight_toRightOf="parent" android:layout_margin="8dp"
+     android:layout_height="wrap_content"  style="@style/Widget.MaterialComponents.Button.TextButton"
+     app:layout_constraintTop_toTopOf="parent" android:id="@+id/fragment_register_btnLogin"/>
+
+    <LinearLayout
+        android:layout_width="match_parent" android:orientation="vertical" app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginRight="16dp">
+
+        <ImageView android:layout_height="64dp" android:layout_width="128dp" android:src="@drawable/a6gnl_innovative_skill_academy_1" />
+        <TextView
+            android:layout_width="wrap_content" android:text="@string/login_title"
+            android:layout_height="wrap_content" android:textSize="32sp"/>
+        <TextView
+            android:layout_width="wrap_content" android:text="@string/register"
+            android:layout_height="wrap_content" android:textSize="28sp" android:textStyle="bold"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent" app:hintEnabled="true" app:hintAnimationEnabled="true" android:hint="@string/hint_login"
+            android:layout_height="wrap_content" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_marginTop="64dp" app:endIconMode="custom" android:id="@+id/register_layout_email"
+            app:endIconDrawable="@drawable/ic_baseline_mark_email_unread_24">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent" android:id="@+id/register_edit_email"
+                android:layout_height="56dp" android:inputType="textEmailAddress"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent" app:hintEnabled="true" app:hintAnimationEnabled="true" android:hint="@string/hint_password"
+            android:layout_height="wrap_content" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_marginTop="8dp" app:endIconMode="password_toggle"
+            android:id="@+id/register_layout_password">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"  android:id="@+id/register_edit_password"
+                android:layout_height="56dp" android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent" app:hintEnabled="true" app:hintAnimationEnabled="true" android:hint="@string/hint_phone"
+            android:layout_height="wrap_content" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_marginTop="8dp" app:endIconMode="custom" android:id="@+id/register_layout_phone"
+            app:endIconDrawable="@drawable/ic_baseline_mark_email_unread_24">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent" android:id="@+id/register_edit_phone"
+                android:layout_height="56dp" android:inputType="number"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent" app:hintEnabled="true" app:hintAnimationEnabled="true" android:hint="@string/hint_installation"
+            android:layout_height="wrap_content" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            android:layout_marginTop="8dp" app:endIconMode="custom" app:endIconDrawable="@drawable/ic_baseline_date_range_24">
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"  android:id="@+id/register_date"
+                android:layout_height="56dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent" android:layout_marginTop="64dp" android:id="@+id/register_button"
+            android:layout_height="64dp" android:text="@string/register_button"/>
+
+    </LinearLayout>
+
+
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:layout_width="match_parent" app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="wrap_content" app:layout_constraintLeft_toLeftOf="parent"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

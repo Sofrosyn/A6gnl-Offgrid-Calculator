@@ -21,8 +21,8 @@ public class HomeFragment extends Fragment  {
 
    private View view;
    private MaterialCardView prInverter;
-   private MaterialCardView prBattery;
-   private MaterialCardView prPanels;
+   private MaterialCardView prNotification;
+   private MaterialCardView prTroubleshoot;
    private MaterialCardView prAbout;
     private CarouselView carouselView;
 
@@ -57,8 +57,8 @@ public class HomeFragment extends Fragment  {
         int[] banners = {R.drawable.go_gree_go_solar,R.drawable.solar_vs_nepa1,R.drawable.solar_maintain};
 
         prInverter = view.findViewById(R.id.Fragment_home_inverter);
-       prBattery = view.findViewById(R.id.Fragment_home_battery);
-        prPanels = view.findViewById(R.id.Fragment_home_panels);
+       prNotification = view.findViewById(R.id.Fragment_notification);
+        prTroubleshoot = view.findViewById(R.id.Fragment_trouble_shoot);
         prAbout = view.findViewById(R.id.Fragment_home_about);
 
         carouselView = view.findViewById(R.id.Fragment_home_carasoul);
@@ -76,9 +76,9 @@ public class HomeFragment extends Fragment  {
     private void initAction(){
 
         prInverter.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.inverterRatingFragment));
-//        prBattery.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.batteryFragment));
-  //      prPanels.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.panelFragment));
        prAbout.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.aboutUsFragment));
+       prTroubleshoot.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.troubleshootFragment));
+       prNotification.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.notificationFragment));
 
     }
 

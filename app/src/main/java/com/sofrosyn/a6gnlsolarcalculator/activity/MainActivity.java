@@ -1,8 +1,10 @@
-package com.sofrosyn.a6gnlsolarcalculator;
+package com.sofrosyn.a6gnlsolarcalculator.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.sofrosyn.a6gnlsolarcalculator.R;
 
 public class MainActivity extends AppCompatActivity {
 

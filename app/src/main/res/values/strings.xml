@@ -2,4 +2,17 @@
     <string name="app_name">A6GNL Solar Calculator</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="login_button">Login</string>
+    <string name="hint_password">Password</string>
+    <string name="login">Login</string>
+    <string name="hint_login">Email</string>
+    <string name="login_title">Proceed with your</string>
+    <string name="register_button">Register</string>
+    <string name="hint_installation">"Installation Date "</string>
+    <string name="register">Registration</string>
+    <string name="hint_phone">Phone number</string>
+    <string name="notification_title">Scheduled maintenance visit</string>
+    <string name="notification_subtitle">We would would like to inform you. A visit has been scheduled for [Date]</string>
+    <string name="notification">Notification</string>
+    <string name="troubleshoot">Troubleshooting</string>
 </resources>
