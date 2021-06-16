@@ -11,28 +11,9 @@
         android:layout_height="match_parent">
 
 
-        <me.itangqi.waveloadingview.WaveLoadingView
-            android:id="@+id/waveLoadingView"
-            android:layout_width="250dp"
-            android:layout_height="250dp"
-            app:wlv_borderColor="@color/colorPrimaryDark"
-            app:wlv_borderWidth="2dp"
-            app:wlv_progressValue="10"
-            app:wlv_shapeType="circle"
-            app:wlv_round_rectangle="true"
-            app:wlv_titleCenter="Load"
-            app:wlv_titleCenterStrokeWidth="3dp"
-            app:wlv_titleCenterColor="@android:color/black"
-            app:wlv_titleCenterSize="24sp"
-            app:wlv_waveAmplitude="50"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="8dp"
-            app:wlv_waveColor="@color/colorPrimaryDark"/>
-
-
 <ScrollView
-    android:layout_width="match_parent" android:layout_below="@id/waveLoadingView"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent" android:layout_below="@id/inverter_next"
+    android:layout_height="match_parent" android:layout_marginTop="16dp">
 
 <LinearLayout
     android:layout_width="match_parent" android:orientation="vertical"

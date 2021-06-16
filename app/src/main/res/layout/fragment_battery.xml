@@ -16,6 +16,7 @@
             android:layout_width="wrap_content" android:orientation="vertical" android:layout_centerHorizontal="true"
             android:layout_height="wrap_content" android:layout_marginTop="16dp" android:id="@+id/line1">
 
+<!--
 
             <com.akexorcist.roundcornerprogressbar.IconRoundCornerProgressBar
                 android:layout_width="260dp" android:layout_height="wrap_content"  app:rcBackgroundColor="#0A000000"
@@ -24,9 +25,7 @@
                 app:rcProgress="0" app:rcProgressColor="@android:color/holo_green_dark" app:rcRadius="5dp"
                 app:rcReverse="true" app:rcAnimationEnable="true" android:id="@+id/battery_progress_charge"/>
 
-            <TextView
-                android:layout_width="wrap_content" android:layout_gravity="center" android:textStyle="bold" android:textSize="20sp"
-                android:layout_height="wrap_content" android:id="@+id/text_chargeController" android:layout_marginTop="8dp" android:text="0"/>
+-->
 
 <!--
 

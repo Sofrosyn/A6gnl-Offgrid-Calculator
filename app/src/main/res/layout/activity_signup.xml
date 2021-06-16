@@ -53,7 +53,7 @@
             android:layout_width="match_parent" app:hintEnabled="true" app:hintAnimationEnabled="true" android:hint="@string/hint_phone"
             android:layout_height="wrap_content" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_marginTop="8dp" app:endIconMode="custom" android:id="@+id/register_layout_phone"
-            app:endIconDrawable="@drawable/ic_baseline_mark_email_unread_24">
+            app:endIconDrawable="@drawable/ic_baseline_phone_enabled_24">
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent" android:id="@+id/register_edit_phone"
                 android:layout_height="56dp" android:inputType="number"/>
@@ -82,8 +82,8 @@
 
 
     <com.google.android.material.progressindicator.LinearProgressIndicator
-        android:layout_width="match_parent" app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_height="wrap_content" app:layout_constraintLeft_toLeftOf="parent"/>
+        android:layout_width="match_parent" app:layout_constraintBottom_toBottomOf="parent" android:visibility="invisible"
+        android:layout_height="wrap_content" app:layout_constraintLeft_toLeftOf="parent" android:id="@+id/register_progress_indicator"/>
 
 
 

@@ -6,17 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".activity.LoginActivity">
 
-    <com.google.android.material.button.MaterialButton
-        android:layout_width="wrap_content" android:text="Signup" app:layout_constraintRight_toRightOf="parent" android:layout_margin="8dp"
-        android:layout_height="wrap_content"  style="@style/Widget.MaterialComponents.Button.TextButton"
-        app:layout_constraintTop_toTopOf="parent" android:id="@+id/fragment_login_btnSignup"/>
-
 
     <LinearLayout
         android:layout_width="match_parent" android:orientation="vertical" app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginRight="16dp">
+        android:layout_height="match_parent" android:layout_marginLeft="16dp" android:layout_marginRight="16dp" >
 
-        <ImageView android:layout_height="64dp" android:layout_width="128dp" android:src="@drawable/a6gnl_innovative_skill_academy_1" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content" android:text="Signup"  android:layout_margin="8dp" android:layout_gravity="right"
+            android:layout_height="wrap_content"  style="@style/Widget.MaterialComponents.Button.TextButton"
+             android:id="@+id/fragment_login_btnSignup"/>
+
+
+        <ImageView android:layout_height="64dp" android:layout_width="128dp"
+            android:src="@drawable/a6gnl_innovative_skill_academy_1"  android:layout_marginTop="24dp"/>
         <TextView
             android:layout_width="wrap_content" android:text="@string/login_title"
             android:layout_height="wrap_content" android:textSize="32sp"/>
@@ -42,7 +46,7 @@
             android:layout_height="wrap_content" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_marginTop="8dp" app:endIconMode="password_toggle" android:id="@+id/login_edit_layout_password">
             <com.google.android.material.textfield.TextInputEditText
-                android:layout_width="match_parent" android:maxLength="4" android:id="@+id/login_edit_text_password"
+                android:layout_width="match_parent"  android:id="@+id/login_edit_text_password"
                 android:layout_height="56dp" android:inputType="textPassword"/>
         </com.google.android.material.textfield.TextInputLayout>
 
